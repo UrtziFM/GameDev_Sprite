@@ -39,7 +39,7 @@ console.log(animationStates);
 
 function animate(){
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-    let position = Math.floor(gameFrame/staggerFrames) % spriteAnimations["idle"].loc;
+    let position = Math.floor(gameFrame/staggerFrames) % spriteAnimations["idle"].loc.length;
     frameX = spriteWidth * position;
     ctx.drawImage(playerImage, frameX, frameY*spriteHeight,
         spriteWidth, spriteHeight, 0, 0, spriteWidth, spriteHeight);
